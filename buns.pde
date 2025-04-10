@@ -1,5 +1,6 @@
 color white =255;
 color black = 0;
+color beige = 237;
 
 
 void setup() {
@@ -10,7 +11,7 @@ void setup() {
 
 void draw() {
   face(200, 100);
-  //face(500, -200);
+  
 }
 
 void face(int x, int y) {
@@ -20,4 +21,9 @@ void face(int x, int y) {
   circle(180, 180, 300);
   
   popMatrix();
+}
+
+void head(int x, int y){
+  fill(beige);
+   circle(180, 180, 300); 
 }
