@@ -105,12 +105,28 @@ void roveronmoon() {
   pushMatrix();
   translate(x1, y1);
   rotate(PI/12);
-  rect(0, -215, 60, 25);
-  fill(wheels);
-  circle(0, -190, 20);
-  circle(55, -184, 20);
+  
+  
+  
+  bodyofrover();
+  //rect(0, -215, 60, 25);//make sub functions
+  wheelsofrover();
+  //fill(wheels);
+  //circle(0, -190, 20);
+  //circle(55, -184, 20);
+  
   littlearmthing();
   popMatrix();
+}
+
+void bodyofrover(){
+  rect(0, -215, 60, 25);
+}
+
+void wheelsofrover(){
+    fill(wheels);
+  circle(0, -190, 20);
+  circle(55, -184, 20);
 }
 
 void littlearmthing() {
@@ -140,16 +156,28 @@ void ships(float rando, float rando1, int amountofships) {
   translate(rando, rando1);
   scale(random(0.3,1.5));
   stroke(random(25,255));
-  fill(random(25, 255));
-  circle(0, 0, 35);
-  fill(random(0, 255));
-  rect(-33, 0, 67, 20, 10);
-  line(-10,20,-20,40);
-  line(10,20,20,40);
+  circularpartofshiplikehead();
+  bodyofship();
+  landinggear();
   popMatrix();
 }
 
 
+void landinggear(){
+  line(-10,20,-20,40);
+  line(10,20,20,40);
+}
+
+void bodyofship(){
+  fill(random(0, 255));
+   rect(-33, 0, 67, 20, 10);
+}
+
+
+void circularpartofshiplikehead(){
+    fill(random(25, 255));
+  circle(0, 0, 35);
+}
 
 void gradient() {
   int y = 0;
